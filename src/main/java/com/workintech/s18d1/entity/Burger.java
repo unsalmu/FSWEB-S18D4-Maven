@@ -1,16 +1,14 @@
 package com.workintech.s18d1.entity;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Data
 @NoArgsConstructor
 @Getter
 @Setter
 @Entity
+@AllArgsConstructor
 @Table(name = "burger", schema = "fsweb")
 public class Burger {
     @Id
