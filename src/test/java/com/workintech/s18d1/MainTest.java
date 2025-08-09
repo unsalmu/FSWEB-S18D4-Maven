@@ -138,7 +138,7 @@ class MainTest {
         TypedQuery<Burger> query = mock(TypedQuery.class);
         when(entityManager.createQuery(anyString(), eq(Burger.class))).thenReturn(query);
         when(query.getResultList()).thenReturn(Arrays.asList(new Burger(), new Burger()));
-        List<Burger> burgers = burgerDao.findByPrice(10);
+        List<Burger> burgers = burgerDao.findByPrice(10.00);
         assertEquals(2, burgers.size());
     }
 
